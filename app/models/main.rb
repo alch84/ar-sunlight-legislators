@@ -55,4 +55,13 @@ def summary
 	puts "#{Legislator.count}"
 end
 
+def delete
+	Legislator.destroy_all(:in_office => false)
+
+end
+
+states
 summary
+delete
+summary
+
